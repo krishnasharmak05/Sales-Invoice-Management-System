@@ -1,5 +1,5 @@
 function closeNavbar(){
-    var element = document.getElementsByClassName("close-button")[0]
-    console.log(element)
-    console.log("Got it!")
+    console.log("Button Pressed!");
+    var element = document.getElementsByName("navbar")[0];
+    element.style.height = 0;
 }
