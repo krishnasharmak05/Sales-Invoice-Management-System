@@ -1,25 +1,192 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Sales Invoice Management System</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice Management Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      background-color: #2c3e50;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .sidebar h1 {
+      color: #f39c12;
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+
+    .sidebar nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 0;
+      display: block;
+      font-weight: 500;
+    }
+
+    .sidebar nav a:hover {
+      background-color: #34495e;
+      border-radius: 5px;
+    }
+
+    /* Main Content */
+    .content {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .header input[type="search"] {
+      padding: 8px 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      position: relative;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .card-title {
+      font-weight: 600;
+      margin: 10px 0;
+    }
+
+    .card-info {
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    .action-buttons {
+      margin-top: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #3498db;
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+
+    .button:hover {
+      background: #2980b9;
+    }
+
+    .status-label {
+      background-color: #2ecc71;
+      color: white;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+    }
+
+    .status-label.pending {
+      background-color: #f39c12;
+    }
+  </style>
 </head>
-
 <body>
-
-    <div class="wrapper">
-        <div class="top-shit">
-        <div class="navbar">
-            <div class="modal">
-                <span id="close-button"  id="close-button" onclick="closeNavbar()">&#10005;</span>
-            </div>
-        </div>
+  <div class="sidebar">
+    <h1>bill.com</h1>
+    <nav>
+      <a href="#">Overview</a>
+      <a href="#">Inbox</a>
+      <a href="#">Documents</a>
+      <a href="#">Vendors</a>
+      <a href="#">Approvals</a>
+      <a href="#">Payments Out</a>
+      <a href="#">Payments In</a>
+      <a href="#">Reports</a>
+      <a href="#">Support</a>
+    </nav>
+  </div>
+  <div class="content">
+    <div class="header">
+      <h2>Invoice Management</h2>
+      <input type="search" placeholder="Search invoices...">
     </div>
+    <div class="grid-container">
+      <div class="card">
+        <h3 class="card-title">Palotalt Consulting</h3>
+        <p class="card-info">Due: 07/18/19 &mdash; USD 120.00</p>
+        <div class="status-label">eBill</div>
+        <div class="action-buttons">
+          <a href="/page.html" class="button">Enter eBill</a>
+        </div>
+      </div>
 
-    <script src="index.js"></script>
+      <div class="card">
+        <h3 class="card-title">Palotalt Consulting</h3>
+        <p class="card-info">Due: 07/18/19 &mdash; USD 120.00</p>
+        <div class="status-label pending">eCredit</div>
+        <div class="action-buttons">
+          <a href="#" class="button">Apply eCredit</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Palotalt Consulting</h3>
+        <p class="card-info">Due: 07/18/19 &mdash; USD 120.00</p>
+        <div class="status-label">ePayment</div>
+        <div class="action-buttons">
+          <a href="#" class="button">Apply ePayment</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Palotalt Consulting</h3>
+        <p class="card-info">Due: 07/18/19 &mdash; USD 120.00</p>
+        <div class="status-label">eBill</div>
+        <div class="action-buttons">
+          <a href="#" class="button">Enter eBill</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </body>
-
 </html>
