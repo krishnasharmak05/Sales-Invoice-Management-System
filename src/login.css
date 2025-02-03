@@ -1,0 +1,60 @@
+body{
+    /* background-image: url("../assets/1.jpg"); */
+    background-size: cover;
+    justify-content: center;
+    background-repeat: no-repeat;
+}
+
+
+input{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 15px;
+    width: 85%;
+    height: 30px;
+    border-color: gray;
+    background-color: rgb(55, 43, 226);
+    border-radius: 20px;
+    color: white;
+}
+
+input::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+#body-div{
+    margin: 10vh 30vw;
+    width: 30%;
+    height: 80vh;
+    background-color: transparent;
+    border: black solid 2px;
+    /* padding-top: 20%; */
+    /* background-color: rgba(255, 255, 255, 0.5);  */
+    backdrop-filter: blur(30px); 
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 50px;
+}
+
+
+.errorField{
+    margin: 10px 10px 10px 20px;
+    width: 90%;
+    height: 20px;
+    color: white;
+    border: red inset 2px;
+    background-color: rgb(200, 20, 22);
+    overflow: hidden;
+}
+
+h1{
+    padding: 20px;
+    text-align: center;
+}
+
+button{
+    margin-left: 20px;
+    width: 90%;
+    border-radius: 10px;;
+}

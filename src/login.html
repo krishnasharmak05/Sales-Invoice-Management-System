@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f5f7;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+        }
+
+        h2 {
+            padding: 10px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .checkbox input {
+            margin-right: 5px;
+        }
+
+        .login-button {
+            background-color: #0056ff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background-color: #0044cc;
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .social-login button {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .google {
+            background-color: #db4437;
+            color: white;
+        }
+
+        .facebook {
+            background-color: #3b5998;
+            color: white;
+        }
+
+        .register {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .register a {
+            color: #0056ff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Log in to your Account</h2>
+        <p>Welcome back! Select method to log in:</p>
+        <br>
+        <div class="social-login">
+            <button class="google">Google</button>
+            <button class="facebook">Facebook</button>
+        </div>
+        <p>or continue with email</p>
+        <div class="input-group">
+            <input type="email" placeholder="Email">
+        </div>
+        <div class="input-group">
+            <input type="password" placeholder="Password">
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" checked> Remember me
+        </div>
+        <a href="/src/home.html"><button class="login-button">Log in</button></a>
+        <p class="register">Don't have an account? <a href="#">Create an account</a></p>
+    </div>
+</body>
+
+</html>

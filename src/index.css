@@ -1,0 +1,234 @@
+/*All Elements*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+/*Body Specific*/
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    color: black;
+}
+
+/*Sidebar*/
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    transition: width 0.5s ease-out, padding 0.5s ease-out, background-color 0.5s ease-out;
+}
+
+.sidebar .title {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar .material-symbols-outlined.collapse-icon {
+    padding-left: 10px;
+    padding-top: 10px;
+    height: 44px;
+    font-size: 24px;
+    color: white;
+}
+
+.sidebar .material-symbols-outlined.collapse-icon:hover {
+    background-color: #34495e;
+    border-radius: 5px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.sidebar .material-symbols-outlined.expand-icon {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    height: 44px;
+    font-size: 24px;
+    border: #2c3e50;
+    cursor: pointer;
+}
+
+
+.sidebar .material-symbols-outlined.expand-icon:hover {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+
+.sidebar h1 {
+    color: #f39c12;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    padding-left: 10px;
+}
+
+
+.sidebar nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-weight: 500;
+}
+
+.sidebar nav a:hover {
+    background-color: #34495e;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+.sidebar.collapsed {
+    width: 80px;
+    padding: 30px 10px 10px 30px;
+    background-color: #f4f4f9;
+}
+
+.sidebar.collapsed .title h1 {
+    display: none;
+
+}
+
+.sidebar.collapsed nav a {
+    display: none;
+}
+
+.sidebar.collapsed button{
+    display: none;
+}
+
+.sidebar.collapsed .material-symbols-outlined.collapse-icon {
+    display: none;
+}
+
+.sidebar.collapsed .expand-icon {
+    display: block;
+    background-color: rgba(180, 180, 180, 0.425);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.sidebar .expand-icon {
+    display: none;
+}
+
+.sidebar button{
+    position: absolute;
+    bottom: 20px;         left: 20px; 
+    margin-top: 20px;
+    background-color:rgba(120, 130, 230, 0.5);
+    color:white;
+    border-radius: 5px;
+    border: black 1px solid;
+    height: 30px;
+    width: 100px;
+}
+
+
+.sidebar button:hover{
+    box-shadow: 0 5px 5px rgba(0, 0, 05, 1);
+    cursor: pointer;
+}
+
+/*Main Content*/
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header input[type="search"] {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin:10px;
+    position: relative;
+}
+
+.card:hover{
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.card-info {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.action-button {
+    margin-top: 10px;
+}
+
+
+.button {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.button:hover {
+    background: #2980b9;
+}
+
+.status-label {
+    background-color: #2ecc71;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #888;
+}
+
+.material-icons {
+    font-size: 18px;
+}

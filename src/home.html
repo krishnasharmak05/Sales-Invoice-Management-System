@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Invoice Management Dashboard</title>
+    
+    <link rel="icon" href="https://www.shutterstock.com/image-vector/bill-icon-pay-document-sign-260nw-307212602.jpg"
+        type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link href="/src/index.css" rel="stylesheet" content="text/css">    
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="title">
+            <h1>Invoice Systems Ltd.</h1>
+            <span class="material-symbols-outlined collapse-icon" title="Collapse sidebar">arrow_back_ios</span>
+            <span class="material-symbols-outlined expand-icon" title="Expand sidebar">arrow_forward_ios</span>
+
+        </div>
+        <nav>
+            <a href="javascript:void(0)">Overview</a>
+            <a href="/src/charts.html">Charts</a>
+            <a href="/src/support.html">Support</a>
+        </nav>
+        <a href="/src/login.html">
+        <button type="submit">Logout</button></a>
+    </div>
+    <div class="content">
+        <div class="header">
+            <h2>Invoice Management</h2>
+            <div class="search-container">
+                <input type="search" placeholder="Search Invoices">
+                <button class="search-icon">
+                    <span class="material-icons">search</span> <!-- Material icon for search -->
+                </button>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="card">
+                <h3 class="card-title">ABC Company</h3>
+                <p class="card-info">Due: 18/01/2026 &mdash; ₹ 9760.00</p>
+                <div class="status-label">Bill</div>
+                <div class="action-button">
+                    <a href="/src/invoice.html" class="button">Enter Bill</a>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">XYZ Consulting</h3>
+                <p class="card-info">Due: 07/02/2026 &mdash; ₹ 7770.00</p>
+                <div class="status-label">Bill</div>
+                <div class="action-button">
+                    <a href="/src/invoice.html" class="button">Enter Bill</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">BCD LLC</h3>
+                <p class="card-info">Due: 12/06/2025 &mdash; ₹ 1570.00</p>
+                <div class="status-label">Bill</div>
+                <div class="action-button">
+                    <a href="/src/invoice.html" class="button">Enter Bill</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">LMN Ltd</h3>
+                <p class="card-info">Due: 21/07/2025 &mdash; ₹ 5570.00</p>
+                <div class="status-label">Bill</div>
+                <div class="action-button">
+                    <a href="/src/invoice.html" class="button">Enter Bill</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="/src/index.js"></script>
+</body>
+
+</html>

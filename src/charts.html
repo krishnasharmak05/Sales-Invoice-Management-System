@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Invoice Management - Charts</title>
+  <link rel="icon" href="https://www.shutterstock.com/image-vector/bill-icon-pay-document-sign-260nw-307212602.jpg"
+  type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 20px;
+      width: 90%;
+      padding-top: 200px;
+      max-width: 1000px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      grid-column: span 2;
+    }
+
+    .chart-container {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    canvas {
+      width: 100%;
+      max-height: 400px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Sales Data Overview</h1>
+
+    <div class="chart-container">
+      <h2>Monthly Sales (Bar Chart)</h2>
+      <canvas id="barChart" width="400" height="300"></canvas>
+    </div>
+
+
+    <div class="chart-container">
+      <h2>Sales Distribution by Region (Pie Chart)</h2>
+      <canvas id="pieChart" width="400" height="300"></canvas>
+    </div>
+
+
+    <div class="chart-container">
+      <h2>Sales Growth Over Year (Line Chart)</h2>
+      <canvas id="lineChart" width="400" height="300"></canvas>
+    </div>
+
+
+    <div class="chart-container">
+      <h2>Sales Share by Product Category (Doughnut Chart)</h2>
+      <canvas id="doughnutChart" width="400" height="300"></canvas>
+    </div>
+  </div>
+
+  <script>
+
+    var ctxBar = document.getElementById('barChart').getContext('2d');
+    var barChart = new Chart(ctxBar, {
+      type: 'bar',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [{
+          label: 'Total Sales ($)',
+          data: [12000, 15000, 18000, 21000, 25000, 30000],
+          backgroundColor: 'rgba(54, 162, 235, 0.6)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) { return '$' + value.toLocaleString(); }
+            }
+          }
+        }
+      }
+    });
+
+
+    var ctxPie = document.getElementById('pieChart').getContext('2d');
+    var pieChart = new Chart(ctxPie, {
+      type: 'pie',
+      data: {
+        labels: ['North', 'South', 'East', 'West'],
+        datasets: [{
+          label: 'Sales by Region',
+          data: [40, 30, 20, 10],
+          backgroundColor: ['rgba(54, 162, 235, 0.6)', 'rgba(255, 99, 132, 0.6)', 'rgba(75, 192, 192, 0.6)', 'rgba(255, 159, 64, 0.6)'],
+          borderColor: ['rgba(54, 162, 235, 1)', 'rgba(255, 99, 132, 1)', 'rgba(75, 192, 192, 1)', 'rgba(255, 159, 64, 1)'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true
+      }
+    });
+
+
+    var ctxLine = document.getElementById('lineChart').getContext('2d');
+    var lineChart = new Chart(ctxLine, {
+      type: 'line',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [{
+          label: 'Sales Growth ($)',
+          data: [12000, 14000, 16000, 18000, 21000, 25000],
+          fill: false,
+          borderColor: 'rgba(75, 192, 192, 1)',
+          tension: 0.1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) { return '$' + value.toLocaleString(); }
+            }
+          }
+        }
+      }
+    });
+
+    var ctxDoughnut = document.getElementById('doughnutChart').getContext('2d');
+    var doughnutChart = new Chart(ctxDoughnut, {
+      type: 'doughnut',
+      data: {
+        labels: ['Electronics', 'Clothing', 'Furniture', 'Books'],
+        datasets: [{
+          label: 'Sales Share by Category',
+          data: [50, 30, 10, 10],
+          backgroundColor: ['rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)', 'rgba(75, 192, 192, 0.6)', 'rgba(153, 102, 255, 0.6)'],
+          borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true
+      }
+    });
+  </script>
+
+</body>
+</html>
