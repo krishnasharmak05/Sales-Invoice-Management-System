@@ -10,7 +10,7 @@
 //       // errorField.innerHTML = "<br>Incorrect Password or Username!<br>";
 //       errorField.textContent = "Incorrect Password or Username!";
 //     } else {
-//       window.location.href="/src/home.html";
+//       window.location.href="home.html";
 //     }
 //   }
   
